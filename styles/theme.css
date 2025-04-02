@@ -1,0 +1,24 @@
+:root {
+  --red: hsl(4, 100%, 67%);
+
+  --blue-800: hsl(234, 29%, 20%);
+  --blue-700: hsl(235, 18%, 26%);
+  --grey: hsl(0, 0%, 58%);
+  --white: hsl(0, 0%, 100%);
+
+  --btn-hover: linear-gradient(to right, #ff5379, #ff693e);
+}
+
+body{
+  background-color: var(--blue-700);
+  color: var(--blue-800);
+
+  @media(width < 750px) {
+    background-color: var(--white);
+  }
+}
+
+.sign-up-page-wrapper,
+.success-page-wrapper{
+  background-color: var(--white);
+}

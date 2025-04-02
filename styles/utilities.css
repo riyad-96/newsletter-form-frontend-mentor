@@ -1,0 +1,84 @@
+body * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.user-email {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  user-select: text;
+}
+
+.error-message {
+  color: var(--red);
+  display: none;
+}
+
+.error-state {
+  border: 1px solid var(--red);
+  outline: 1px solid var(--red);
+  color: var(--red);
+  background-color: #ffe8e6;
+}
+
+.show {
+  display: block;
+}
+
+.loading-screen {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  display: none;
+
+  svg {
+    width: 60px;
+    height: 60px;
+    animation: rotate 2.5s linear infinite;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes scaleDown {
+  100%{
+    transform: scale(0.9)
+  }
+}
+
+.scale-down{
+  animation: scaleDown 1s ease forwards;
+}
+
+@keyframes glitch {
+  0% { 
+    transform: translate(0);
+    text-shadow: 0 0 #ff00ff, 0 0 #00ffff;
+  }
+  20% {
+    transform: translate(-2px, 2px);
+    text-shadow: -2px 0 #ff00ff, 2px 0 #00ffff;
+  }
+  40% {
+    transform: translate(2px, -2px);
+  }
+  60% {
+    transform: translate(-2px, 1px);
+    text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff;
+  }
+  80% {
+    transform: translate(1px, -1px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.glitch-text {
+  animation: glitch 0.8s linear infinite;
+}

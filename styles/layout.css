@@ -1,0 +1,29 @@
+.sign-up-page,
+.success-page {
+  min-height: 100vh;
+
+  @media(width > 750px) {
+    display: grid;
+    place-items: center;
+  }
+}
+
+.sign-up-page-wrapper {
+  width: min(100%, 930px);
+
+  @media(width < 750px) {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+}
+
+.success-page-wrapper {
+  width: min(100%, 550px);
+
+  @media(width < 750px) {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+}
+
